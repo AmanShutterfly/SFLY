@@ -1,0 +1,1 @@
+view "V_MARA" AS SELECT * FROM  S_MARA
