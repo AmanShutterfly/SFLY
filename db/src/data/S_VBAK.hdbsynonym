@@ -1,0 +1,8 @@
+{
+  "S_VBAK": {
+    "target": {
+      "object": "VBAK",
+      "schema": "G_S4_DEV"
+    }
+  }
+}

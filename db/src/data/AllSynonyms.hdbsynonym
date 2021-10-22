@@ -1,0 +1,212 @@
+{
+  "S_PI_DCTYTXT": {
+    "target": {
+      "object": "/LIME/PI_DCTYTXT",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_PI_DOC_IT": {
+    "target": {
+      "object": "/LIME/PI_DOC_IT",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_PI_DOC_SER": {
+    "target": {
+      "object": "/LIME/PI_DOC_SER",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_PI_DOC_TB": {
+    "target": {
+      "object": "/LIME/PI_DOC_TB",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_PI_IT_BIZ": {
+    "target": {
+      "object": "/LIME/PI_IT_BIZ",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_PI_LOGHEAD": {
+    "target": {
+      "object": "/LIME/PI_LOGHEAD",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_PI_LOGHIST": {
+    "target": {
+      "object": "/LIME/PI_LOGHIST",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_PI_LOGITEM": {
+    "target": {
+      "object": "/LIME/PI_LOGITEM",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_PI_PAR_BIZ": {
+    "target": {
+      "object": "/LIME/PI_PAR_BIZ",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_AQUA": {
+    "target": {
+      "object": "/SCWM/AQUA",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_ORDIM_C": {
+    "target": {
+      "object": "/SCWM/ORDIM_C",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_A017": {
+    "target": {
+      "object": "A017",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_ACDOCA": {
+    "target": {
+      "object": "ACDOCA",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_ADRC": {
+    "target": {
+      "object": "ADRC",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_BUT000": {
+    "target": {
+      "object": "BUT000",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_EINA": {
+    "target": {
+      "object": "EINA",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_KNVP": {
+    "target": {
+      "object": "KNVP",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_KNVV": {
+    "target": {
+      "object": "KNVV",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_LFA1": {
+    "target": {
+      "object": "LFA1",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_LFB1": {
+    "target": {
+      "object": "LFB1",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_LIKP": {
+    "target": {
+      "object": "LIKP",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_LIPS": {
+    "target": {
+      "object": "LIPS",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_MARC": {
+    "target": {
+      "object": "MARC",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_MAST": {
+    "target": {
+      "object": "MAST",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_MBEW": {
+    "target": {
+      "object": "MBEW",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_MVKE": {
+    "target": {
+      "object": "MVKE",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_STKO": {
+    "target": {
+      "object": "STKO",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_STPO": {
+    "target": {
+      "object": "STPO",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_T179": {
+    "target": {
+      "object": "T179",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_TPAR": {
+    "target": {
+      "object": "TPAR",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_VBEP": {
+    "target": {
+      "object": "VBEP",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_VBFA": {
+    "target": {
+      "object": "VBFA",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_VBKD": {
+    "target": {
+      "object": "VBKD",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_VBPA": {
+    "target": {
+      "object": "VBPA",
+      "schema": "G_S4_DEV"
+    }
+  },
+  "S_ZOM_OG_PROMO": {
+    "target": {
+      "object": "ZOM_OG_PROMO",
+      "schema": "G_S4_DEV"
+    }
+  }
+}

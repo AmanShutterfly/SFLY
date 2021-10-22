@@ -1,0 +1,8 @@
+{
+  "S_VBRP": {
+    "target": {
+      "object": "VBRP",
+      "schema": "G_S4_DEV"
+    }
+  }
+}

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="TempBillingCV" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="TempBillingCV.hdbcalculationview"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="V_VBRK">
+    <resourceUri>V_VBRK</resourceUri>
+  </DataSource>
+  <DataSource id="V_VBRP">
+    <resourceUri>V_VBRP</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Billing_header">
+    <viewAttributes>
+      <viewAttribute id="VBELN"/>
+      <viewAttribute id="WAERK"/>
+      <viewAttribute id="KUNAG"/>
+      <viewAttribute id="KUNRG"/>
+      <viewAttribute id="ERDAT"/>
+      <viewAttribute id="AEDAT"/>
+      <viewAttribute id="INCO1"/>
+      <viewAttribute id="SPART"/>
+      <viewAttribute id="VTWEG"/>
+      <viewAttribute id="KUNWE"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="V_VBRK"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Billing_item">
+    <viewAttributes>
+      <viewAttribute id="FKIMG"/>
+      <viewAttribute id="MANDT"/>
+      <viewAttribute id="POSNR"/>
+      <viewAttribute id="FKIMG_1"/>
+      <viewAttribute id="MEINS"/>
+      <viewAttribute id="NETWR"/>
+      <viewAttribute id="MATNR"/>
+      <viewAttribute id="MATKL"/>
+      <viewAttribute id="UEPOS"/>
+      <viewAttribute id="UMVKZ"/>
+      <viewAttribute id="SMENG"/>
+      <viewAttribute id="FKLMG"/>
+      <viewAttribute id="NTGEW"/>
+      <viewAttribute id="BRGEW"/>
+      <viewAttribute id="MATKL_1"/>
+      <viewAttribute id="GEWEI"/>
+      <viewAttribute id="GEWEI_1"/>
+      <viewAttribute id="VBELN"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="V_VBRP">
+      <mapping xsi:type="Calculation:AttributeMapping" target="FKIMG_1" source="FKIMG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATKL_1" source="MATKL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GEWEI_1" source="GEWEI"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="CN_N" joinType="leftOuter">
+    <viewAttributes>
+      <viewAttribute id="VBELN"/>
+      <viewAttribute id="WAERK"/>
+      <viewAttribute id="KUNAG"/>
+      <viewAttribute id="KUNRG"/>
+      <viewAttribute id="ERDAT"/>
+      <viewAttribute id="AEDAT"/>
+      <viewAttribute id="INCO1"/>
+      <viewAttribute id="SPART"/>
+      <viewAttribute id="VTWEG"/>
+      <viewAttribute id="KUNWE"/>
+      <viewAttribute id="FKIMG" aggregationType="sum"/>
+      <viewAttribute id="MANDT"/>
+      <viewAttribute id="POSNR" aggregationType="sum"/>
+      <viewAttribute id="FKIMG_1" aggregationType="sum"/>
+      <viewAttribute id="MEINS"/>
+      <viewAttribute id="NETWR" aggregationType="sum"/>
+      <viewAttribute id="MATNR"/>
+      <viewAttribute id="MATKL"/>
+      <viewAttribute id="UEPOS" aggregationType="sum"/>
+      <viewAttribute id="UMVKZ" aggregationType="sum"/>
+      <viewAttribute id="SMENG" aggregationType="sum"/>
+      <viewAttribute id="FKLMG" aggregationType="sum"/>
+      <viewAttribute id="NTGEW" aggregationType="sum"/>
+      <viewAttribute id="BRGEW" aggregationType="sum"/>
+      <viewAttribute id="GEWEI"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Billing_header">
+      <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WAERK" source="WAERK"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KUNAG" source="KUNAG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KUNRG" source="KUNRG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AEDAT" source="AEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="INCO1" source="INCO1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SPART" source="SPART"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VTWEG" source="VTWEG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KUNWE" source="KUNWE"/>
+    </input>
+    <input node="Billing_item">
+      <mapping xsi:type="Calculation:AttributeMapping" target="FKIMG" source="FKIMG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FKIMG_1" source="FKIMG_1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MEINS" source="MEINS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NETWR" source="NETWR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATKL" source="MATKL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UEPOS" source="UEPOS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UMVKZ" source="UMVKZ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SMENG" source="SMENG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FKLMG" source="FKLMG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NTGEW" source="NTGEW"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BRGEW" source="BRGEW"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GEWEI" source="GEWEI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+    </input>
+    <joinAttribute name="VBELN"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_1">
+  <attributes>
+    <attribute id="VBELN" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VBELN"/>
+      <keyMapping columnObjectName="Join_1" columnName="VBELN"/>
+    </attribute>
+    <attribute id="WAERK" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WAERK"/>
+      <keyMapping columnObjectName="Join_1" columnName="WAERK"/>
+    </attribute>
+    <attribute id="KUNAG" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KUNAG"/>
+      <keyMapping columnObjectName="Join_1" columnName="KUNAG"/>
+    </attribute>
+    <attribute id="KUNRG" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KUNRG"/>
+      <keyMapping columnObjectName="Join_1" columnName="KUNRG"/>
+    </attribute>
+    <attribute id="ERDAT" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERDAT"/>
+      <keyMapping columnObjectName="Join_1" columnName="ERDAT"/>
+    </attribute>
+    <attribute id="AEDAT" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AEDAT"/>
+      <keyMapping columnObjectName="Join_1" columnName="AEDAT"/>
+    </attribute>
+    <attribute id="INCO1" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="INCO1"/>
+      <keyMapping columnObjectName="Join_1" columnName="INCO1"/>
+    </attribute>
+    <attribute id="SPART" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SPART"/>
+      <keyMapping columnObjectName="Join_1" columnName="SPART"/>
+    </attribute>
+    <attribute id="VTWEG" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VTWEG"/>
+      <keyMapping columnObjectName="Join_1" columnName="VTWEG"/>
+    </attribute>
+    <attribute id="KUNWE" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KUNWE"/>
+      <keyMapping columnObjectName="Join_1" columnName="KUNWE"/>
+    </attribute>
+    <attribute id="MANDT" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MANDT"/>
+      <keyMapping columnObjectName="Join_1" columnName="MANDT"/>
+    </attribute>
+    <attribute id="MEINS" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MEINS"/>
+      <keyMapping columnObjectName="Join_1" columnName="MEINS"/>
+    </attribute>
+    <attribute id="MATNR" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="MATNR"/>
+    </attribute>
+    <attribute id="MATKL" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATKL"/>
+      <keyMapping columnObjectName="Join_1" columnName="MATKL"/>
+    </attribute>
+    <attribute id="GEWEI" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GEWEI"/>
+      <keyMapping columnObjectName="Join_1" columnName="GEWEI"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="FKIMG" order="11" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="FKIMG"/>
+      <measureMapping columnObjectName="Join_1" columnName="FKIMG"/>
+    </measure>
+    <measure id="POSNR" order="13" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="POSNR"/>
+      <measureMapping columnObjectName="Join_1" columnName="POSNR"/>
+    </measure>
+    <measure id="FKIMG_1" order="14" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="FKIMG_1"/>
+      <measureMapping columnObjectName="Join_1" columnName="FKIMG_1"/>
+    </measure>
+    <measure id="NETWR" order="16" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="NETWR"/>
+      <measureMapping columnObjectName="Join_1" columnName="NETWR"/>
+    </measure>
+    <measure id="UEPOS" order="19" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="UEPOS"/>
+      <measureMapping columnObjectName="Join_1" columnName="UEPOS"/>
+    </measure>
+    <measure id="UMVKZ" order="20" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="UMVKZ"/>
+      <measureMapping columnObjectName="Join_1" columnName="UMVKZ"/>
+    </measure>
+    <measure id="SMENG" order="21" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="SMENG"/>
+      <measureMapping columnObjectName="Join_1" columnName="SMENG"/>
+    </measure>
+    <measure id="FKLMG" order="22" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="FKLMG"/>
+      <measureMapping columnObjectName="Join_1" columnName="FKLMG"/>
+    </measure>
+    <measure id="NTGEW" order="23" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="NTGEW"/>
+      <measureMapping columnObjectName="Join_1" columnName="NTGEW"/>
+    </measure>
+    <measure id="BRGEW" order="24" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="BRGEW"/>
+      <measureMapping columnObjectName="Join_1" columnName="BRGEW"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="221" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Billing_header" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="356"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Billing_item" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="302" y="356"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="221" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  
+    <shape modelObjectName="Billing_header" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="49" y="54"/>
+      <rectangleSize width="146"/>
+    </shape>
+    <shape modelObjectName="Billing_item" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="136"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

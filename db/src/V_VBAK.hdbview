@@ -1,0 +1,1 @@
+view "V_VBAK" AS SELECT * FROM "S_VBAK"
