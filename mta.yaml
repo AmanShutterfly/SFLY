@@ -8,7 +8,7 @@ modules:
   requires:
   - name: hdi_db
     properties:
-      TARGET_CONTAINER: sfly_sdi_01
+      TARGET_CONTAINER: ~{hdi-container-name}
   - name: cross-container-service-1
     group: SERVICE_REPLACEMENTS
     properties:
