@@ -237,11 +237,11 @@
     </shape>
   
     <shape expanded="true" modelObjectName="Billing_header" modelObjectNameSpace="CalculationView">
-      <upperLeftCorner x="92" y="356"/>
+      <upperLeftCorner x="-8" y="360"/>
       <rectangleSize height="30" width="160"/>
     </shape>
     <shape expanded="true" modelObjectName="Billing_item" modelObjectNameSpace="CalculationView">
-      <upperLeftCorner x="302" y="356"/>
+      <upperLeftCorner x="464" y="358"/>
       <rectangleSize height="30" width="160"/>
     </shape>
     <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
